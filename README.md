@@ -1,0 +1,1 @@
+A simple URL shortener built using FastAPI and PostgreSQL
