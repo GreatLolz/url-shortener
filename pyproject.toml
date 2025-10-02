@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "url-shortener"
+version = "0.0.1"
+description = "A simple URL shortener built using FastAPI and PostgreSQL"
+authors = ["greatlolz"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.118.0"
+uvicorn = "^0.37.0"
+sqlalchemy = "^2.0.43"
+psycopg2 = "^2.9.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
