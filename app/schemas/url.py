@@ -9,9 +9,6 @@ class CreateUrlResponse(BaseModel):
     original_url: str
     short_url: str
 
-class GetUrlInfoRequest(BaseModel):
-    short_url: str
-
 class GetUrlInfoResponse(BaseModel):
     original_url: str
     short_url: str
