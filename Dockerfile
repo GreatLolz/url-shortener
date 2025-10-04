@@ -18,8 +18,9 @@ EXPOSE 8000
 
 ENV DEV=0
 
-CMD ["/bin/sh", "-c", "if [ \"$DEV\" = \"1\" ]; then \
-  exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload; \
-  else \
-  exec uvicorn app.main:app --host 0.0.0.0 --port 8000; \
-  fi"]
+COPY migrations ./migrations
+COPY alembic.ini ./
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+CMD ["/entrypoint.sh"]
