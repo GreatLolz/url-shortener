@@ -40,7 +40,13 @@ Create a user and database for the application in your PostgreSQL instance.
 DATABASE_URL=postgresql+psycopg2://<db_user>:<db_password>@<db_host>:5432/<db_name>
 ```
 
-### 5. Run the application:
+### 5. Apply database migrations:
+
+```bash
+$ poetry run alembic upgrade head
+```
+
+### 6. Run the application:
 
 ```bash
 $ poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000
