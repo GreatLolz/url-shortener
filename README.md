@@ -122,6 +122,13 @@ Alternatively, you can access the ReDoc documentation at the `/redoc` endpoint.
         }
         ```
 
+### Testing
+
+Run tests:
+```bash
+poetry run pytest
+```
+
 # License
 
 This project is licensed under the MIT License.
