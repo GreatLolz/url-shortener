@@ -17,6 +17,16 @@ pydantic = "^2.11.9"
 alembic = "^1.16.5"
 python-dotenv = "^1.1.1"
 
+[tool.pytest.ini_options]
+env = [
+    "DATABASE_URL=sqlite:///:memory:?check_same_thread=False",
+]
+
+[tool.poetry.group.dev.dependencies]
+pytest-postgresql = "^7.0.2"
+psycopg = {extras = ["binary"], version = "^3.2.10"}
+pytest-env = "^1.1.5"
+httpx = "^0.28.1"
 
 [build-system]
 requires = ["poetry-core"]
