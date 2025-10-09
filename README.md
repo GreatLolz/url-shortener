@@ -124,6 +124,11 @@ Alternatively, you can access the ReDoc documentation at the `/redoc` endpoint.
 
 ### Testing
 
+Install dev dependencies:
+```bash
+poetry install --with dev
+```
+
 Run tests:
 ```bash
 poetry run pytest
